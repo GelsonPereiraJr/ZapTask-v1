@@ -10,6 +10,7 @@ C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.Ge
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.AssemblyInfoInputs.cache
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.AssemblyInfo.cs
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.csproj.CoreCompileInputs.cache
+C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.sourcelink.json
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask..A73B8C4A.Up2Date
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\ZapTask.Infrastructure.dll
 C:\src\ZapTask\ZapTask.Infrastructure\obj\Debug\net9.0\refint\ZapTask.Infrastructure.dll

@@ -8,6 +8,7 @@ C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.Generate
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.AssemblyInfoInputs.cache
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.AssemblyInfo.cs
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.csproj.CoreCompileInputs.cache
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.sourcelink.json
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask..410AE88E.Up2Date
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.dll
 C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\refint\ZapTask.Application.dll

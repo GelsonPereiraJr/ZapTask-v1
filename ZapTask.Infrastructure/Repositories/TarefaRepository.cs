@@ -8,6 +8,15 @@ namespace ZapTask.Infrastructure.Repositories
     {
         private static readonly List<Tarefa> _tarefas = new();
 
+        public Task<List<Tarefa>> ObterPendentesAsync()
+        {
+           var pendentes = _tarefas
+                .Where(t => t.Status == Domain.Enums.StatusTarefa.Pendente)
+                .ToList();
+
+            return Task.FromResult(pendentes);
+        }
+
         public Task SalvarAsync(Tarefa tarefa)
         {
             _tarefas.Add(tarefa);

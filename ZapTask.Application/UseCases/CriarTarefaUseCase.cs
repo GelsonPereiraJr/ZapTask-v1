@@ -18,7 +18,7 @@ namespace ZapTask.Application.UseCases
         {
             var tarefa = new Tarefa(
                 dto.Titulo,
-                dto.Prazo,
+                dto.Prazo.ToLocalTime(),
                 dto.WhatsAppId
             );
           

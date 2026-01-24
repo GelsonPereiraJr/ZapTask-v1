@@ -5,6 +5,7 @@ C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.GeneratedMSBuildEd
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.AssemblyInfoInputs.cache
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.AssemblyInfo.cs
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.csproj.CoreCompileInputs.cache
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.sourcelink.json
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.dll
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\refint\ZapTask.Domain.dll
 C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.pdb

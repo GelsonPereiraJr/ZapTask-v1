@@ -9,5 +9,6 @@ namespace ZapTask.Application.Interfaces
    public interface ITarefaRepository
     {
         Task SalvarAsync(Tarefa tarefa);
+        Task<List<Tarefa>> ObterPendentesAsync();
     } 
 }
