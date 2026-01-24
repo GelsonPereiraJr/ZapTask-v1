@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1FtLyzMKSjU=",
+  "success": true,
+  "projectFilePath": "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gelso\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\gelso\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\gelso\\.nuget\\packages\\scalar.aspnetcore\\2.12.14\\scalar.aspnetcore.2.12.14.nupkg.sha512"
+  ],
+  "logs": []
+}

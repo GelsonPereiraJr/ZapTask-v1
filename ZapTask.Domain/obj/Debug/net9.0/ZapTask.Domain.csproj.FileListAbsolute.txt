@@ -1,0 +1,11 @@
+C:\src\ZapTask\ZapTask.Domain\bin\Debug\net9.0\ZapTask.Domain.deps.json
+C:\src\ZapTask\ZapTask.Domain\bin\Debug\net9.0\ZapTask.Domain.dll
+C:\src\ZapTask\ZapTask.Domain\bin\Debug\net9.0\ZapTask.Domain.pdb
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.AssemblyInfoInputs.cache
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.AssemblyInfo.cs
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.csproj.CoreCompileInputs.cache
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.dll
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\refint\ZapTask.Domain.dll
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ZapTask.Domain.pdb
+C:\src\ZapTask\ZapTask.Domain\obj\Debug\net9.0\ref\ZapTask.Domain.dll

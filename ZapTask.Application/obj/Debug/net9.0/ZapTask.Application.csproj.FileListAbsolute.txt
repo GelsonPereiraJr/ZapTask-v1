@@ -1,0 +1,15 @@
+C:\src\ZapTask\ZapTask.Application\bin\Debug\net9.0\ZapTask.Application.deps.json
+C:\src\ZapTask\ZapTask.Application\bin\Debug\net9.0\ZapTask.Application.dll
+C:\src\ZapTask\ZapTask.Application\bin\Debug\net9.0\ZapTask.Application.pdb
+C:\src\ZapTask\ZapTask.Application\bin\Debug\net9.0\ZapTask.Domain.dll
+C:\src\ZapTask\ZapTask.Application\bin\Debug\net9.0\ZapTask.Domain.pdb
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.csproj.AssemblyReference.cache
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.AssemblyInfoInputs.cache
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.AssemblyInfo.cs
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.csproj.CoreCompileInputs.cache
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask..410AE88E.Up2Date
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.dll
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\refint\ZapTask.Application.dll
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ZapTask.Application.pdb
+C:\src\ZapTask\ZapTask.Application\obj\Debug\net9.0\ref\ZapTask.Application.dll
