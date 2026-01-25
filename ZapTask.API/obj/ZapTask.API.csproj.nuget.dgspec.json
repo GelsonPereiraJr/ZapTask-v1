@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\ZapTask\\ZapTask.Api\\ZapTask.API.csproj": {}
+    "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj": {}
   },
   "projects": {
-    "C:\\src\\ZapTask\\ZapTask.Api\\ZapTask.API.csproj": {
+    "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\ZapTask\\ZapTask.Api\\ZapTask.API.csproj",
+        "projectUniqueName": "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj",
         "projectName": "ZapTask.API",
-        "projectPath": "C:\\src\\ZapTask\\ZapTask.Api\\ZapTask.API.csproj",
+        "projectPath": "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj",
         "packagesPath": "C:\\Users\\gelso\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\ZapTask\\ZapTask.Api\\obj\\",
+        "outputPath": "C:\\src\\ZapTask\\ZapTask.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

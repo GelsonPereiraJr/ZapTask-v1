@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0TOl6W9MyU=",
+  "dgSpecHash": "I2jO/Kh/I9s=",
   "success": true,
-  "projectFilePath": "C:\\src\\ZapTask\\ZapTask.Api\\ZapTask.API.csproj",
+  "projectFilePath": "C:\\src\\ZapTask\\ZapTask.API\\ZapTask.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gelso\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
     "C:\\Users\\gelso\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.2\\microsoft.extensions.configuration.10.0.2.nupkg.sha512",
