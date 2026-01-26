@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZapTask.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85d6fd0cc829ec401500c9483777ba75e45d7501")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eade0875d030155c8ee4f79aece040f45273009e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZapTask.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZapTask.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

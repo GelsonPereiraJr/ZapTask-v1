@@ -1,17 +1,17 @@
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace ZapTask.Infrastructure.Jobs
 {
-    public class MotorDemandasService : BackgroundService
+    public class MotorDemandaServices : BackgroundService
     {
         private readonly IServiceScopeFactory _scopeFactory;
-        private readonly ILogger<MotorDemandasService> _logger;
+        private readonly ILogger<MotorDemandaServices> _logger;
 
-        public MotorDemandasService(
+        public MotorDemandaServices(
             IServiceScopeFactory scopeFactory,
-            ILogger<MotorDemandasService> logger)
+            ILogger<MotorDemandaServices> logger)
         {
             _scopeFactory = scopeFactory;
             _logger = logger;
