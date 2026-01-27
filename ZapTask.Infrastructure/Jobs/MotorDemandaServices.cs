@@ -1,19 +1,19 @@
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ZapTask.Application.Interfaces;
 
 namespace ZapTask.Infrastructure.Jobs
 {
-    public class MotorDemandasService : BackgroundService
+    public class MotorDemandaServices : BackgroundService
     {
-        private readonly IServiceScopeFactory _scopeFactory;
-        private readonly ILogger<MotorDemandasService> _logger;
+        private readonly ILogger<MotorDemandaServices> _logger;
+        private readonly ITarefaRepository _repository;
 
-        public MotorDemandasService(
-            IServiceScopeFactory scopeFactory,
-            ILogger<MotorDemandasService> logger)
+        public MotorDemandaServices(
+            ITarefaRepository repository,
+            ILogger<MotorDemandaServices> logger)
         {
-            _scopeFactory = scopeFactory;
+            _repository = repository;
             _logger = logger;
         }
 
@@ -23,24 +23,22 @@ namespace ZapTask.Infrastructure.Jobs
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                using var scope = _scopeFactory.CreateScope();
-                var repository = scope.ServiceProvider
-                    .GetRequiredService<ZapTask.Application.Interfaces.ITarefaRepository>();
-
-                var tarefas = await repository.ObterPendentesAsync();
+                var tarefas = await _repository.ObterPendentesAsync();
 
                 foreach (var tarefa in tarefas)
                 {
-                    if (tarefa.EstaVencida())
-                    {
-                        tarefa.RegistrarTentativa();
+                    if (!tarefa.PodeInsistir(DateTime.UtcNow))
+                        continue;
 
-                        _logger.LogInformation(
-                            "🔔 Tarefa vencida: {Titulo} | Tentativas: {Tentativas}",
-                            tarefa.Titulo,
-                            tarefa.Tentativas
-                        );
-                    }
+                    // FUTURO: envio WhatsApp
+                    _logger.LogInformation(
+                        "🔔 Enviando alerta: {Titulo} | Tentativas: {Tentativas}",
+                        tarefa.Titulo,
+                        tarefa.Tentativas + 1
+                    );
+
+                    tarefa.RegistrarInsistencia();
+                    await _repository.AtualizarAsync(tarefa);
                 }
 
                 await Task.Delay(TimeSpan.FromSeconds(30), stoppingToken);

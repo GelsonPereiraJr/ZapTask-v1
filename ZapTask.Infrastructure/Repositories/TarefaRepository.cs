@@ -1,26 +1,46 @@
-
 using ZapTask.Application.Interfaces;
 using ZapTask.Domain.Entities;
+using ZapTask.Domain.Enums;
+using ZapTask.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
+
+
+
 
 namespace ZapTask.Infrastructure.Repositories
 {
     public class TarefaRepository : ITarefaRepository
     {
-        private static readonly List<Tarefa> _tarefas = new();
+        private readonly ZapTaskDbContext _context;
 
-        public Task<List<Tarefa>> ObterPendentesAsync()
+        public TarefaRepository(ZapTaskDbContext context)
         {
-           var pendentes = _tarefas
-                .Where(t => t.Status == Domain.Enums.StatusTarefa.Pendente)
-                .ToList();
-
-            return Task.FromResult(pendentes);
+            _context = context;
         }
 
-        public Task SalvarAsync(Tarefa tarefa)
+        public async Task SalvarAsync(Tarefa tarefa)
         {
-            _tarefas.Add(tarefa);
-            return Task.CompletedTask;
+            _context.Tarefas.Add(tarefa);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Tarefa>> ObterPendentesAsync()
+{
+         return await _context.Tarefas
+            .Where(t => t.Status != StatusTarefa.Concluida)
+            .ToListAsync();
+}
+
+
+        public async Task AtualizarAsync(Tarefa tarefa)
+        {
+            _context.Tarefas.Update(tarefa);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Tarefa?> BuscarPorIdAsync(Guid id)
+        {
+            return await _context.Tarefas.FindAsync(id);
         }
     }
 }

@@ -18,6 +18,8 @@ namespace ZapTask.Domain.Entities
         public DateTime Prazo { get; private set; }
         public StatusTarefa Status { get; private set; }
         public int Tentativas { get; private set; }
+        public DateTime? ProximaTentativaEm { get; private set; }
+
 
         protected Tarefa() { } 
 
@@ -41,6 +43,31 @@ namespace ZapTask.Domain.Entities
             => DateTime.Now >= Prazo && Status == StatusTarefa.Pendente;
 
         public void RegistrarTentativa()
-            => Tentativas++;
+            => Tentativas++; 
+
+
+        public bool PodeInsistir(DateTime agora)
+        {
+          if (Status == StatusTarefa.Concluida)
+            return false;
+
+          if (Tentativas == 0)
+            return true;
+
+            return agora >= ProximaTentativaEm;
+        }
+
+        public void RegistrarInsistencia()
+        {
+            Tentativas++;
+            
+        ProximaTentativaEm = Tentativas switch
+           {
+              1 => DateTime.UtcNow.AddMinutes(5),
+              2 => DateTime.UtcNow.AddMinutes(15),
+              3 => DateTime.UtcNow.AddHours(1),
+             _=> DateTime.UtcNow.AddHours(4)
+           };
+        }
     }
 }

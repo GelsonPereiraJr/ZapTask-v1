@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZapTask.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85d6fd0cc829ec401500c9483777ba75e45d7501")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63bd14f5ea0bfbaa3e1bf3855753ee84bbf59c40")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZapTask.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZapTask.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
