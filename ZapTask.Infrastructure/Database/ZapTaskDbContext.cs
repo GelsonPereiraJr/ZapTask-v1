@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using ZapTask.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using ZapTask.Domain.Enums;
 
 
 namespace ZapTask.Infrastructure.Database
@@ -22,7 +23,7 @@ namespace ZapTask.Infrastructure.Database
                 entity.Property(e => e.Titulo).IsRequired();
                 entity.Property(e => e.Prazo).IsRequired();
                 entity.Property(e => e.WhatsAppId).IsRequired();
-                entity.Property(e => e.Status).HasDefaultValue("Pendente");
+                entity.Property(t => t.Status).HasConversion<int>() .HasDefaultValue(StatusTarefa.Pendente);
                 entity.Property(e => e.Tentativas).HasDefaultValue(0);
             });
         }
