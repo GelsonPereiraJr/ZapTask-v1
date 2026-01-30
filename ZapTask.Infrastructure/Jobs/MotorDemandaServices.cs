@@ -4,6 +4,9 @@ using ZapTask.Application.Interfaces;
 
 namespace ZapTask.Infrastructure.Jobs
 {
+
+  namespace ZapTask.Infrastructure.Jobs
+{
     public class MotorDemandaServices : BackgroundService
     {
         private readonly ILogger<MotorDemandaServices> _logger;
@@ -30,7 +33,6 @@ namespace ZapTask.Infrastructure.Jobs
                     if (!tarefa.PodeInsistir(DateTime.UtcNow))
                         continue;
 
-                    // FUTURO: envio WhatsApp
                     _logger.LogInformation(
                         "🔔 Enviando alerta: {Titulo} | Tentativas: {Tentativas}",
                         tarefa.Titulo,
@@ -45,4 +47,6 @@ namespace ZapTask.Infrastructure.Jobs
             }
         }
     }
+}
+
 }

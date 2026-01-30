@@ -13,6 +13,6 @@ namespace ZapTask.Application.Interfaces
         Task AtualizarAsync(Tarefa tarefa);
         Task<Tarefa> BuscarPorIdAsync(Guid id);
         Task<List<Tarefa>> ObterPendentesAsync();
-
+        Task<Tarefa> ObterPorIdAsync(Guid id);
     } 
 }
