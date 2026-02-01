@@ -10,16 +10,13 @@ namespace ZapTask.Domain.Entities
 {
     public class Tarefa
     {
-        public Guid Id { get; private set; }
-
-        public string Titulo { get; private set; } = string.Empty;
-        public string WhatsAppId { get; private set; } = string.Empty;
-
-        public DateTime Prazo { get; private set; }
-        public StatusTarefa Status { get; private set; }
-        public int Tentativas { get; private set; }
+        public Guid Id { get; set; }
+        public string Titulo { get; set; } = string.Empty;
+        public string WhatsAppId { get; set; } = string.Empty;
+        public DateTime Prazo { get; set; }
+        public StatusTarefa Status { get; private set; } = StatusTarefa.Pendente;
+        public int Tentativas { get; private set; } = 0;
         public DateTime? ProximaTentativaEm { get; private set; }
-
 
         protected Tarefa() { } 
 
@@ -39,6 +36,12 @@ namespace ZapTask.Domain.Entities
             Tentativas = 0;
         }
 
+        public enum StatusTarefa
+        {
+          Pendente = 0,
+          Concluida = 1
+        }
+
         public bool EstaVencida()
             => DateTime.Now >= Prazo && Status == StatusTarefa.Pendente;
 
@@ -46,21 +49,11 @@ namespace ZapTask.Domain.Entities
             => Tentativas++; 
 
 
-        public bool PodeInsistir(DateTime agora)
-        {
-            if (Status != StatusTarefa.Pendente)
-            return false;
+        public bool PodeInsistir(DateTime agora) =>
+            Status != StatusTarefa.Concluida &&
+            (ProximaTentativaEm == null || agora >= ProximaTentativaEm);
 
-            if (!EstaVencida())
-                return false;
-
-            if (ProximaTentativaEm.HasValue && agora < ProximaTentativaEm.Value)
-                return false;
-
-            return true;
-        }
-
-        public void RegistrraInsistencia()
+        public void RegistrarInsistencia()
         {
             Tentativas++;
 

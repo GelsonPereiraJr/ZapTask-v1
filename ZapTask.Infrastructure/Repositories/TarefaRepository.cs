@@ -27,7 +27,7 @@ namespace ZapTask.Infrastructure.Repositories
         public async Task<List<Tarefa>> ObterPendentesAsync()
         {
          return await _context.Tarefas
-            .Where(t => t.Status != StatusTarefa.Concluida)
+            .Where(t => t.Status != Tarefa.StatusTarefa.Concluida)
             .ToListAsync();
         }
 
