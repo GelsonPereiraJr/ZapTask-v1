@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZapTask.Infrastructure.Database;
 
@@ -10,9 +11,11 @@ using ZapTask.Infrastructure.Database;
 namespace ZapTask.Infrastructure.Migrations
 {
     [DbContext(typeof(ZapTaskDbContext))]
-    partial class ZapTaskDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260130001008_AddProximaTentativa")]
+    partial class AddProximaTentativa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");

@@ -25,11 +25,11 @@ namespace ZapTask.Infrastructure.Repositories
         }
 
         public async Task<List<Tarefa>> ObterPendentesAsync()
-{
+        {
          return await _context.Tarefas
             .Where(t => t.Status != StatusTarefa.Concluida)
             .ToListAsync();
-}
+        }
 
 
         public async Task AtualizarAsync(Tarefa tarefa)
@@ -39,6 +39,11 @@ namespace ZapTask.Infrastructure.Repositories
         }
 
         public async Task<Tarefa?> BuscarPorIdAsync(Guid id)
+        {
+            return await _context.Tarefas.FindAsync(id);
+        }
+
+        public async Task<Tarefa?> ObterPorIdAsync(Guid id)
         {
             return await _context.Tarefas.FindAsync(id);
         }

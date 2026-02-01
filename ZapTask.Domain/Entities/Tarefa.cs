@@ -48,26 +48,34 @@ namespace ZapTask.Domain.Entities
 
         public bool PodeInsistir(DateTime agora)
         {
-          if (Status == StatusTarefa.Concluida)
+            if (Status != StatusTarefa.Pendente)
             return false;
 
-          if (Tentativas == 0)
-            return true;
+            if (!EstaVencida())
+                return false;
 
-            return agora >= ProximaTentativaEm;
+            if (ProximaTentativaEm.HasValue && agora < ProximaTentativaEm.Value)
+                return false;
+
+            return true;
         }
 
-        public void RegistrarInsistencia()
+        public void RegistrraInsistencia()
         {
             Tentativas++;
-            
-        ProximaTentativaEm = Tentativas switch
-           {
-              1 => DateTime.UtcNow.AddMinutes(5),
-              2 => DateTime.UtcNow.AddMinutes(15),
-              3 => DateTime.UtcNow.AddHours(1),
-             _=> DateTime.UtcNow.AddHours(4)
-           };
+
+            ProximaTentativaEm = Tentativas switch
+            {
+                1 => DateTime.UtcNow.AddMinutes(5),
+                2 => DateTime.UtcNow.AddMinutes(15),
+                3 => DateTime.UtcNow.AddMinutes(30),
+                _ => DateTime.UtcNow.AddMinutes(60)
+            };
+        }
+
+        public void Concluir()
+        {
+            Status = StatusTarefa.Concluida;
         }
     }
 }
