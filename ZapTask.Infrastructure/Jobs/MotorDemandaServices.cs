@@ -24,7 +24,7 @@ namespace ZapTask.Infrastructure.Jobs
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _logger.LogInformation("🔥 Motor de Demandas iniciado");
+            _logger.LogInformation("Motor de Demandas iniciado");
 
             while (!stoppingToken.IsCancellationRequested)
             {

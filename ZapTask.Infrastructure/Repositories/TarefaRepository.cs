@@ -17,6 +17,12 @@ namespace ZapTask.Infrastructure.Repositories
         {
             _context = context;
         }
+        
+        public async Task AdicionarAsync(Tarefa tarefa)
+        {
+        _context.Tarefas.Add(tarefa);
+        await _context.SaveChangesAsync();
+        }
 
         public async Task SalvarAsync(Tarefa tarefa)
         {
@@ -30,8 +36,7 @@ namespace ZapTask.Infrastructure.Repositories
             .Where(t => t.Status != Tarefa.StatusTarefa.Concluida)
             .ToListAsync();
         }
-
-
+        
         public async Task AtualizarAsync(Tarefa tarefa)
         {
             _context.Tarefas.Update(tarefa);

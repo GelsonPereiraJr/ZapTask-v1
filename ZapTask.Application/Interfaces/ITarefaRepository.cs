@@ -11,6 +11,7 @@ namespace ZapTask.Application.Interfaces
     {
         Task SalvarAsync(Tarefa tarefa);
         Task AtualizarAsync(Tarefa tarefa);
+        Task AdicionarAsync(Tarefa tarefa);
         Task<Tarefa> BuscarPorIdAsync(Guid id);
         Task<List<Tarefa>> ObterPendentesAsync();
         Task<Tarefa> ObterPorIdAsync(Guid id);
