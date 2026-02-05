@@ -1,6 +1,5 @@
 using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ZapTask.Infrastructure.Services
@@ -18,6 +17,26 @@ namespace ZapTask.Infrastructure.Services
             _accessToken = accessToken;
         }
 
+        /// Envia uma mensagem de texto simples
+        public async Task EnviarMensagemSimplesAsync(string whatsappId, string texto)
+        {
+            var payload = new
+            {
+                messaging_product = "whatsapp",
+                to = whatsappId,
+                type = "text",
+                text = new { body = texto }
+            };
+
+            var request = new HttpRequestMessage(HttpMethod.Post, $"https://graph.facebook.com/v17.0/{_phoneNumberId}/messages");
+            request.Headers.Add("Authorization", $"Bearer {_accessToken}");
+            request.Content = JsonContent.Create(payload);
+
+            var response = await _httpClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+        }
+
+        /// Envia uma mensagem interativa com botões para tarefas
         public async Task EnviarTarefaAsync(string whatsappId, string titulo, DateTime prazo, int tentativas)
         {
             var payload = new
